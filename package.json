@@ -145,6 +145,7 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-prettier": "^1.2.0",
     "stylelint-scss": "^3.19.0",
+    "tailwindcss": "^2.2.4",
     "treeify": "^1.1.0",
     "ts-mockito": "2.6.1",
     "ts-morph": "^11.0.0",
