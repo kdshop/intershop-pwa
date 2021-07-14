@@ -2,9 +2,11 @@
   <button
     type="submit"
     name="addProduct"
-    class="btn"
+    class="text-base font-bold uppercase p-1"
     [ngClass]="class"
-    [class.btn-primary]="!displayIcon"
+    [class.bg-purple-500]="!displayIcon"
+    [class.hover:bg-purple-700]="!displayIcon"
+    [class.text-white]="!displayIcon"
     [disabled]="(hasQuantityError$ | async) || (displaySpinner$ | async)"
     [attr.title]="translationKey$ | async | translate"
     data-testing-id="addToCartButton"
