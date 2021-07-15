@@ -5,3 +5,6 @@
 !/robots.txt
 !/server.crt
 !/server.key
+!/server.js
+!/prometheus.js
+!/build-ecosystem.js

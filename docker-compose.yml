@@ -8,9 +8,6 @@ services:
       context: .
       # dockerfile: Dockerfile_noSSR
       args:
-        # configuration: local
-        configuration: production
-        # configuration: local,production
         serviceWorker: 'false'
     environment:
       - LOGGING=on
@@ -69,3 +66,6 @@ services:
           - baseHref: /fr
             channel: default
             lang: fr_FR
+          - baseHref: /b2b
+            channel: default
+            theme: blue

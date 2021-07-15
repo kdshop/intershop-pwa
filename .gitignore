@@ -43,6 +43,7 @@
 *.log
 /typings
 /src/environments/environment.local.ts
+/src/environments/environment.development.ts
 
 # System Files
 .DS_Store
