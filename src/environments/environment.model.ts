@@ -107,6 +107,7 @@ export interface Environment {
       | Auth0Config;
   };
 
+  // enable and configure data persistence for specific stores (compare, recently, tacton)
   dataRetention: DataRetentionPolicy;
 }
 
