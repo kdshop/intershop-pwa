@@ -2,6 +2,8 @@
 !/.gitignore
 !/*.sh
 !/healthcheck.js
+!/readinessprobe.js
+!/livenessprobe.js
 !/robots.txt
 !/server.crt
 !/server.key
