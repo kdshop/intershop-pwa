@@ -27,7 +27,7 @@ RUN npm run build:multi server
 # remove cache check for resources (especially index.html)
 # https://github.com/angular/angular/issues/23613#issuecomment-415886919
 RUN test "${serviceWorker}" = "true" && sed -i 's/canonicalHash !== cacheBustedHash/false/g' /workspace/dist/browser/ngsw-worker.js || true
-COPY dist/entrypoint.sh dist/*.js dist/server.* dist/robots.txt* /workspace/dist/
+COPY dist/* /workspace/dist/
 
 FROM node:14-alpine
 RUN npm i -g express express-http-proxy pm2 prom-client
