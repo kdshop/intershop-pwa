@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundStatusGuard } from 'ish-core/guards/not-found-status.guard';
 import { matchCategoryRoute } from 'ish-core/routing/category/category.route';
 import { matchProductRoute } from 'ish-core/routing/product/product.route';
+import { WAREHOUSE_PATH } from 'ish-core/routing/warehouse/warehouse.route';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     matcher: matchCategoryRoute,
     loadChildren: () => import('./category/category-page.module').then(m => m.CategoryPageModule),
+  },
+  {
+    path: WAREHOUSE_PATH,
+    loadChildren: () => import('./warehouse/warehouse.module').then(m => m.WarehouseModule),
   },
   {
     path: '**',

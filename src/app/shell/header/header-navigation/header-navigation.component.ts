@@ -1,7 +1,9 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { map, withLatestFrom } from 'rxjs/operators';
 
 import { ShoppingFacade } from 'ish-core/facades/shopping.facade';
+import { WarehouseFacade } from 'ish-core/facades/warehouse.facade';
 import { NavigationCategory } from 'ish-core/models/navigation-category/navigation-category.model';
 
 @Component({
@@ -19,7 +21,10 @@ export class HeaderNavigationComponent implements OnInit {
   constructor(private shoppingFacade: ShoppingFacade) {}
 
   ngOnInit() {
-    this.categories$ = this.shoppingFacade.navigationCategories$();
+    this.categories$ = this.shoppingFacade.navigationCategories$().pipe(
+      withLatestFrom(WarehouseFacade.navigationWarehouse()),
+      map(([categoriesNavigation, warehouseNavigation]) => [...categoriesNavigation, warehouseNavigation])
+    );
   }
 
   /**

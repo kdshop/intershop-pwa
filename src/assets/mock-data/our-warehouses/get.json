@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "country": "Germany",
+      "city": "Jena",
+      "postalCode": 4967
+    },
+    {
+      "id": 2,
+      "country": "Australia",
+      "city": "Melbourne",
+      "postalCode": 1515
+    },
+    {
+      "id": 3,
+      "country": "United States",
+      "city": "San Francisco",
+      "postalCode": 3127
+    },
+    {
+      "id": 4,
+      "country": "United Kingdom",
+      "city": "London",
+      "postalCode": 4463
+    },
+    {
+      "id": 5,
+      "country": "China",
+      "city": "Shanghai",
+      "postalCode": 4304
+    },
+    {
+      "id": 6,
+      "country": "Japan",
+      "city": "Tokyo",
+      "postalCode": 3212
+    },
+    {
+      "id": 7,
+      "country": "India",
+      "city": "New Dehli",
+      "postalCode": 991
+    },
+    {
+      "id": 8,
+      "country": "Mexico",
+      "city": "Mexico City",
+      "postalCode": 796
+    },
+    {
+      "id": 9,
+      "country": "Brasil",
+      "city": "Brasilia",
+      "postalCode": 3218
+    },
+    {
+      "id": 10,
+      "country": "Russia",
+      "city": "Moscow",
+      "postalCode": 795
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+<table>
+  <tr *ngFor="let warehouse of warehouses; trackBy: trackByKey;">
+    <td>{{ warehouse.country }}, {{ warehouse.city }}, {{ warehouse.postalCode }}</td>
+  </tr>
+</table>
