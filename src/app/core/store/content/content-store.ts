@@ -6,6 +6,7 @@ import { PageletsState } from './pagelets/pagelets.reducer';
 import { PagesState } from './pages/pages.reducer';
 import { ParametersState } from './parameters/parameters.reducer';
 import { ViewcontextsState } from './viewcontexts/viewcontexts.reducer';
+import { WarehouseState } from './warehouse/warehouse.reducer';
 
 export interface ContentState {
   includes: IncludesState;
@@ -14,6 +15,7 @@ export interface ContentState {
   viewcontexts: ViewcontextsState;
   pagetree: PageTreeState;
   parameters: ParametersState;
+  warehouse: WarehouseState;
 }
 
 export const getContentState = createFeatureSelector<ContentState>('content');

@@ -17,6 +17,8 @@ import { ParametersEffects } from './parameters/parameters.effects';
 import { parametersReducer } from './parameters/parameters.reducer';
 import { ViewcontextsEffects } from './viewcontexts/viewcontexts.effects';
 import { viewcontextsReducer } from './viewcontexts/viewcontexts.reducer';
+import { WarehouseEffects } from './warehouse/warehouse.effects';
+import { warehouseReducer } from './warehouse/warehouse.reducer';
 
 const contentReducers: ActionReducerMap<ContentState> = {
   includes: includesReducer,
@@ -25,9 +27,17 @@ const contentReducers: ActionReducerMap<ContentState> = {
   viewcontexts: viewcontextsReducer,
   pagetree: pageTreeReducer,
   parameters: parametersReducer,
+  warehouse: warehouseReducer,
 };
 
-const contentEffects = [IncludesEffects, PagesEffects, ViewcontextsEffects, PageTreeEffects, ParametersEffects];
+const contentEffects = [
+  IncludesEffects,
+  PagesEffects,
+  ViewcontextsEffects,
+  PageTreeEffects,
+  ParametersEffects,
+  WarehouseEffects,
+];
 
 const metaReducers = [resetOnLogoutMeta];
 

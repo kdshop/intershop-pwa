@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 import { WarehouseFacade } from 'ish-core/facades/warehouse.facade';
 
@@ -7,7 +7,12 @@ import { WarehouseFacade } from 'ish-core/facades/warehouse.facade';
   templateUrl: './our-warehouses.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class OurWarehousesComponent {
-  constructor(private warehouseFacade: WarehouseFacade) {}
+export class OurWarehousesComponent implements OnInit {
   warehouses$ = this.warehouseFacade.ourWarehouses$;
+
+  constructor(private warehouseFacade: WarehouseFacade) {}
+
+  ngOnInit(): void {
+    this.warehouseFacade.loadWarehouses();
+  }
 }
